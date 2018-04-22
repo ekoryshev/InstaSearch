@@ -8,21 +8,61 @@
 
 /* Begin PBXBuildFile section */
 		446A328A208CC28300689A4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A3289208CC28300689A4D /* AppDelegate.swift */; };
-		446A328C208CC28300689A4D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A328B208CC28300689A4D /* ViewController.swift */; };
-		446A328F208CC28300689A4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 446A328D208CC28300689A4D /* Main.storyboard */; };
 		446A3291208CC28300689A4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 446A3290208CC28300689A4D /* Assets.xcassets */; };
-		446A3294208CC28300689A4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 446A3292208CC28300689A4D /* LaunchScreen.storyboard */; };
+		446A32A4208CDF3600689A4D /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32A3208CDF3600689A4D /* AppAssembly.swift */; };
+		446A32A9208CDFBE00689A4D /* MVVMAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32A8208CDFBE00689A4D /* MVVMAssembly.swift */; };
+		446A32AB208CE20200689A4D /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32AA208CE20200689A4D /* CustomNavigationController.swift */; };
+		446A32AD208CE8CD00689A4D /* MediaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32AC208CE8CD00689A4D /* MediaCollectionViewController.swift */; };
+		446A32AF208CEC0500689A4D /* MediaCollectionAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32AE208CEC0500689A4D /* MediaCollectionAssembly.swift */; };
+		446A32B2208CF15A00689A4D /* MediaCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32B1208CF15A00689A4D /* MediaCollectionView.swift */; };
+		446A32B4208CF41D00689A4D /* MediaCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32B3208CF41D00689A4D /* MediaCollectionViewModel.swift */; };
+		446A32D4208CF6AA00689A4D /* MVVMViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32D3208CF6AA00689A4D /* MVVMViewModel.swift */; };
+		446A32D6208CF75900689A4D /* MVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32D5208CF75900689A4D /* MVVMViewController.swift */; };
+		446A32DB208CFD5900689A4D /* SessionInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32DA208CFD5900689A4D /* SessionInterface.swift */; };
+		446A32DD208CFD8A00689A4D /* NetworkManagerInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32DC208CFD8A00689A4D /* NetworkManagerInterface.swift */; };
+		446A32DF208CFE0E00689A4D /* ConfigurationInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32DE208CFE0E00689A4D /* ConfigurationInterface.swift */; };
+		446A32E1208CFED000689A4D /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32E0208CFED000689A4D /* Session.swift */; };
+		446A32E3208CFF0200689A4D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32E2208CFF0200689A4D /* NetworkManager.swift */; };
+		446A32E5208CFF2B00689A4D /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32E4208CFF2B00689A4D /* Configuration.swift */; };
+		446A32E8208D009900689A4D /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32E7208D009900689A4D /* Endpoints.swift */; };
+		446A32ED208D0D3800689A4D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32EC208D0D3800689A4D /* Utils.swift */; };
+		446A32F1208D0EF800689A4D /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32F0208D0EF800689A4D /* ErrorResponse.swift */; };
+		446A32F4208D143D00689A4D /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32F3208D143D00689A4D /* APIError.swift */; };
+		446A32F6208D146400689A4D /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32F5208D146400689A4D /* NetworkError.swift */; };
+		446A32F9208D1B6500689A4D /* UIView+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32F8208D1B6500689A4D /* UIView+ActivityIndicator.swift */; };
+		446A32FC208D26EC00689A4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 446A32FA208D26EC00689A4D /* LaunchScreen.storyboard */; };
+		446A32FE208D294200689A4D /* MVVMLifeCycleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32FD208D294200689A4D /* MVVMLifeCycleProtocol.swift */; };
 		E65CC75E053B2A18E5D130C6 /* Pods_InstaSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6941DF7069476B5214D1B3EE /* Pods_InstaSearch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		446A3286208CC28300689A4D /* InstaSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		446A3289208CC28300689A4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		446A328B208CC28300689A4D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		446A328E208CC28300689A4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		446A3290208CC28300689A4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		446A3293208CC28300689A4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		446A3295208CC28300689A4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		446A32A3208CDF3600689A4D /* AppAssembly.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; tabWidth = 4; };
+		446A32A8208CDFBE00689A4D /* MVVMAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMAssembly.swift; sourceTree = "<group>"; };
+		446A32AA208CE20200689A4D /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		446A32AC208CE8CD00689A4D /* MediaCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCollectionViewController.swift; sourceTree = "<group>"; };
+		446A32AE208CEC0500689A4D /* MediaCollectionAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCollectionAssembly.swift; sourceTree = "<group>"; };
+		446A32B1208CF15A00689A4D /* MediaCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCollectionView.swift; sourceTree = "<group>"; };
+		446A32B3208CF41D00689A4D /* MediaCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaCollectionViewModel.swift; sourceTree = "<group>"; };
+		446A32D3208CF6AA00689A4D /* MVVMViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMViewModel.swift; sourceTree = "<group>"; };
+		446A32D5208CF75900689A4D /* MVVMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMViewController.swift; sourceTree = "<group>"; };
+		446A32DA208CFD5900689A4D /* SessionInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionInterface.swift; sourceTree = "<group>"; };
+		446A32DC208CFD8A00689A4D /* NetworkManagerInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerInterface.swift; sourceTree = "<group>"; };
+		446A32DE208CFE0E00689A4D /* ConfigurationInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationInterface.swift; sourceTree = "<group>"; };
+		446A32E0208CFED000689A4D /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		446A32E2208CFF0200689A4D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		446A32E4208CFF2B00689A4D /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		446A32E7208D009900689A4D /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
+		446A32EC208D0D3800689A4D /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		446A32F0208D0EF800689A4D /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		446A32F3208D143D00689A4D /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		446A32F5208D146400689A4D /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		446A32F8208D1B6500689A4D /* UIView+ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ActivityIndicator.swift"; sourceTree = "<group>"; };
+		446A32FB208D26EC00689A4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		446A32FD208D294200689A4D /* MVVMLifeCycleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMLifeCycleProtocol.swift; sourceTree = "<group>"; };
 		6941DF7069476B5214D1B3EE /* Pods_InstaSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB94D3E03D45A8CCE409FB96 /* Pods-InstaSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstaSearch/Pods-InstaSearch.release.xcconfig"; sourceTree = "<group>"; };
 		EE45A3DF6EBE6A962AD169B5 /* Pods-InstaSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaSearch/Pods-InstaSearch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -78,14 +118,154 @@
 		446A3288208CC28300689A4D /* InstaSearch */ = {
 			isa = PBXGroup;
 			children = (
+				446A32A1208CDB9500689A4D /* CoreLayer */,
+				446A32A2208CDBB100689A4D /* ApplicationLayer */,
+				446A329B208CD92100689A4D /* SupportingFiles */,
 				446A3289208CC28300689A4D /* AppDelegate.swift */,
-				446A328B208CC28300689A4D /* ViewController.swift */,
-				446A328D208CC28300689A4D /* Main.storyboard */,
+				446A32A3208CDF3600689A4D /* AppAssembly.swift */,
+				446A32AA208CE20200689A4D /* CustomNavigationController.swift */,
 				446A3290208CC28300689A4D /* Assets.xcassets */,
-				446A3292208CC28300689A4D /* LaunchScreen.storyboard */,
-				446A3295208CC28300689A4D /* Info.plist */,
+				446A32FA208D26EC00689A4D /* LaunchScreen.storyboard */,
 			);
 			path = InstaSearch;
+			sourceTree = "<group>";
+		};
+		446A329B208CD92100689A4D /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				446A3295208CC28300689A4D /* Info.plist */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		446A32A1208CDB9500689A4D /* CoreLayer */ = {
+			isa = PBXGroup;
+			children = (
+				446A32E9208D0BFD00689A4D /* Utils */,
+				446A32A6208CDF8F00689A4D /* Base */,
+				446A32EE208D0E7300689A4D /* Models */,
+				446A32D7208CFCED00689A4D /* Services */,
+				446A32E6208D007500689A4D /* Constants */,
+			);
+			path = CoreLayer;
+			sourceTree = "<group>";
+		};
+		446A32A2208CDBB100689A4D /* ApplicationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				446A32B0208CF0A900689A4D /* MediaCollection */,
+			);
+			path = ApplicationLayer;
+			sourceTree = "<group>";
+		};
+		446A32A6208CDF8F00689A4D /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				446A32A7208CDFA000689A4D /* MVVM */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		446A32A7208CDFA000689A4D /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				446A32A8208CDFBE00689A4D /* MVVMAssembly.swift */,
+				446A32D3208CF6AA00689A4D /* MVVMViewModel.swift */,
+				446A32D5208CF75900689A4D /* MVVMViewController.swift */,
+				446A32FD208D294200689A4D /* MVVMLifeCycleProtocol.swift */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		446A32B0208CF0A900689A4D /* MediaCollection */ = {
+			isa = PBXGroup;
+			children = (
+				446A32B1208CF15A00689A4D /* MediaCollectionView.swift */,
+				446A32B3208CF41D00689A4D /* MediaCollectionViewModel.swift */,
+				446A32AC208CE8CD00689A4D /* MediaCollectionViewController.swift */,
+				446A32AE208CEC0500689A4D /* MediaCollectionAssembly.swift */,
+			);
+			path = MediaCollection;
+			sourceTree = "<group>";
+		};
+		446A32D7208CFCED00689A4D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				446A32D8208CFD0900689A4D /* Interfaces */,
+				446A32D9208CFD1500689A4D /* Implementations */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		446A32D8208CFD0900689A4D /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				446A32DA208CFD5900689A4D /* SessionInterface.swift */,
+				446A32DC208CFD8A00689A4D /* NetworkManagerInterface.swift */,
+				446A32DE208CFE0E00689A4D /* ConfigurationInterface.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		446A32D9208CFD1500689A4D /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				446A32F2208D142000689A4D /* Errors */,
+				446A32E0208CFED000689A4D /* Session.swift */,
+				446A32E2208CFF0200689A4D /* NetworkManager.swift */,
+				446A32E4208CFF2B00689A4D /* Configuration.swift */,
+			);
+			path = Implementations;
+			sourceTree = "<group>";
+		};
+		446A32E6208D007500689A4D /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				446A32E7208D009900689A4D /* Endpoints.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		446A32E9208D0BFD00689A4D /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				446A32F7208D1AF300689A4D /* Extensions */,
+				446A32EC208D0D3800689A4D /* Utils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		446A32EE208D0E7300689A4D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				446A32EF208D0EE000689A4D /* Responces */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		446A32EF208D0EE000689A4D /* Responces */ = {
+			isa = PBXGroup;
+			children = (
+				446A32F0208D0EF800689A4D /* ErrorResponse.swift */,
+			);
+			path = Responces;
+			sourceTree = "<group>";
+		};
+		446A32F2208D142000689A4D /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				446A32F3208D143D00689A4D /* APIError.swift */,
+				446A32F5208D146400689A4D /* NetworkError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		446A32F7208D1AF300689A4D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				446A32F8208D1B6500689A4D /* UIView+ActivityIndicator.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,9 +330,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				446A3294208CC28300689A4D /* LaunchScreen.storyboard in Resources */,
 				446A3291208CC28300689A4D /* Assets.xcassets in Resources */,
-				446A328F208CC28300689A4D /* Main.storyboard in Resources */,
+				446A32FC208D26EC00689A4D /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,6 +350,7 @@
 				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftDate/SwiftDate.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -180,6 +360,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftDate.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,26 +408,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				446A328C208CC28300689A4D /* ViewController.swift in Sources */,
+				446A32E1208CFED000689A4D /* Session.swift in Sources */,
+				446A32DF208CFE0E00689A4D /* ConfigurationInterface.swift in Sources */,
+				446A32E8208D009900689A4D /* Endpoints.swift in Sources */,
+				446A32B2208CF15A00689A4D /* MediaCollectionView.swift in Sources */,
+				446A32D4208CF6AA00689A4D /* MVVMViewModel.swift in Sources */,
+				446A32B4208CF41D00689A4D /* MediaCollectionViewModel.swift in Sources */,
+				446A32AB208CE20200689A4D /* CustomNavigationController.swift in Sources */,
+				446A32E5208CFF2B00689A4D /* Configuration.swift in Sources */,
+				446A32AF208CEC0500689A4D /* MediaCollectionAssembly.swift in Sources */,
+				446A32FE208D294200689A4D /* MVVMLifeCycleProtocol.swift in Sources */,
+				446A32F6208D146400689A4D /* NetworkError.swift in Sources */,
+				446A32DB208CFD5900689A4D /* SessionInterface.swift in Sources */,
+				446A32DD208CFD8A00689A4D /* NetworkManagerInterface.swift in Sources */,
+				446A32A9208CDFBE00689A4D /* MVVMAssembly.swift in Sources */,
+				446A32F9208D1B6500689A4D /* UIView+ActivityIndicator.swift in Sources */,
+				446A32D6208CF75900689A4D /* MVVMViewController.swift in Sources */,
+				446A32AD208CE8CD00689A4D /* MediaCollectionViewController.swift in Sources */,
+				446A32F1208D0EF800689A4D /* ErrorResponse.swift in Sources */,
+				446A32E3208CFF0200689A4D /* NetworkManager.swift in Sources */,
 				446A328A208CC28300689A4D /* AppDelegate.swift in Sources */,
+				446A32ED208D0D3800689A4D /* Utils.swift in Sources */,
+				446A32A4208CDF3600689A4D /* AppAssembly.swift in Sources */,
+				446A32F4208D143D00689A4D /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		446A328D208CC28300689A4D /* Main.storyboard */ = {
+		446A32FA208D26EC00689A4D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				446A328E208CC28300689A4D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		446A3292208CC28300689A4D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				446A3293208CC28300689A4D /* Base */,
+				446A32FB208D26EC00689A4D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

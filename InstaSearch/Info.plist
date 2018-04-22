@@ -22,8 +22,6 @@
 	<true/>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
@@ -41,5 +39,14 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>Configuration</key>
+    <dict>
+        <key>IS_API_URL</key>
+        <string>$(IS_API_URL)</string>
+        <key>IS_INSTA_CLIENT_ID</key>
+        <string>$(IS_INSTA_CLIENT_ID)</string>
+        <key>IS_INSTA_REDIRECT_URL</key>
+        <string>$(IS_INSTA_REDIRECT_URL)</string>
+    </dict>
 </dict>
 </plist>
