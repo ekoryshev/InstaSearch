@@ -12,6 +12,7 @@
 		446A328F208CC28300689A4D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 446A328D208CC28300689A4D /* Main.storyboard */; };
 		446A3291208CC28300689A4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 446A3290208CC28300689A4D /* Assets.xcassets */; };
 		446A3294208CC28300689A4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 446A3292208CC28300689A4D /* LaunchScreen.storyboard */; };
+		E65CC75E053B2A18E5D130C6 /* Pods_InstaSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6941DF7069476B5214D1B3EE /* Pods_InstaSearch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		446A3290208CC28300689A4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		446A3293208CC28300689A4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		446A3295208CC28300689A4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6941DF7069476B5214D1B3EE /* Pods_InstaSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB94D3E03D45A8CCE409FB96 /* Pods-InstaSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstaSearch/Pods-InstaSearch.release.xcconfig"; sourceTree = "<group>"; };
+		EE45A3DF6EBE6A962AD169B5 /* Pods-InstaSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaSearch/Pods-InstaSearch.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E65CC75E053B2A18E5D130C6 /* Pods_InstaSearch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2CB04A51CED069BC95C9599B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6941DF7069476B5214D1B3EE /* Pods_InstaSearch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		34C2297DA5D6338378A02C87 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EE45A3DF6EBE6A962AD169B5 /* Pods-InstaSearch.debug.xcconfig */,
+				BB94D3E03D45A8CCE409FB96 /* Pods-InstaSearch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		446A327D208CC28300689A4D = {
 			isa = PBXGroup;
 			children = (
 				446A3288208CC28300689A4D /* InstaSearch */,
 				446A3287208CC28300689A4D /* Products */,
+				34C2297DA5D6338378A02C87 /* Pods */,
+				2CB04A51CED069BC95C9599B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 446A3298208CC28300689A4D /* Build configuration list for PBXNativeTarget "InstaSearch" */;
 			buildPhases = (
+				57AF886FF95B567F1E2F3022 /* [CP] Check Pods Manifest.lock */,
 				446A3282208CC28300689A4D /* Sources */,
 				446A3283208CC28300689A4D /* Frameworks */,
 				446A3284208CC28300689A4D /* Resources */,
+				09648C30C2992C7D468EC9D9 /* [CP] Embed Pods Frameworks */,
+				11B461E6783137137EED9ED5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09648C30C2992C7D468EC9D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-InstaSearch/Pods-InstaSearch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstaSearch/Pods-InstaSearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		11B461E6783137137EED9ED5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstaSearch/Pods-InstaSearch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57AF886FF95B567F1E2F3022 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InstaSearch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		446A3282208CC28300689A4D /* Sources */ = {
@@ -272,6 +363,7 @@
 		};
 		446A3299208CC28300689A4D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE45A3DF6EBE6A962AD169B5 /* Pods-InstaSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +379,7 @@
 		};
 		446A329A208CC28300689A4D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB94D3E03D45A8CCE409FB96 /* Pods-InstaSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
