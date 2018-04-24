@@ -5,8 +5,8 @@ class User: Codable {
     var username: String
     var profilePicture: String
     var fullName: String
-    var bio: String
-    var isBusiness: Bool
+    var bio: String?
+    var isBusiness: Bool?
     
     enum CodingKeys: String, CodingKey {
         case id

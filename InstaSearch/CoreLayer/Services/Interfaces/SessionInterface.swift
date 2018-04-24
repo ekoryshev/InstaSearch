@@ -3,7 +3,7 @@ import Foundation
 protocol SessionInterface {
     
     /// The API token
-    var accessToken: String? { get set }
+    var accessToken: String? { get set } // FIXME: Use Keychain!
     
     /// The current user id
     var userID: String? { get set }

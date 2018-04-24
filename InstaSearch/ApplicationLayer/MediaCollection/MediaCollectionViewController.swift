@@ -46,6 +46,8 @@ class MediaCollectionViewController: MVVMViewController, MVVMLifeCycleProtocol {
     func bindViewModel(_ viewModel: MediaCollectionViewModel) {
         super.bindViewModel(viewModel)
         
+        configureDataSignal(viewModel)
+        
         if session.isAuthorized == true {
             viewModel.loadMedia()
         }
@@ -91,6 +93,23 @@ class MediaCollectionViewController: MVVMViewController, MVVMLifeCycleProtocol {
                 self,
                 selector: #selector(logInBarButtonItemTap(_:)))
             self.navigationItem.rightBarButtonItem = logInItem
+        }
+    }
+    
+    private func configureDataSignal(_ viewModel: MediaCollectionViewModel) {
+        viewModel.data.signal
+            .observe(on: UIScheduler())
+            .take(duringLifetimeOf: self)
+            .observeValues { [weak self] _ in
+                withExtendedLifetime(self) {
+                    print(#function)
+                    
+                    for item in viewModel.data.value!.data {
+                        print("\(item.caption.text)\n")
+                    }
+                    
+                    // TODO: Reload data
+                }
         }
     }
     

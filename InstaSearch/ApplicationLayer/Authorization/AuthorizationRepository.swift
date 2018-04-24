@@ -14,8 +14,8 @@ class AuthorizationRepository {
             "client_secret": configuration.instaClientSecret,
             "grant_type": "authorization_code",
             "redirect_uri": configuration.instaRedirectURL,
-            "code": code,
-            ]
+            "code": code
+        ]
         
         networkManager.request(
             .accessToken,

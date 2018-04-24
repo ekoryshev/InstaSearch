@@ -24,6 +24,7 @@ class AuthorizationViewModel: MVVMViewModel {
     func authorize(code: String) {
         loading.value = true
         repository.authorize(code: code) { [weak self] result in
+            // TODO: Handle empty result
             switch result {
             case let .success(value):
                 print("username: \(value?.user.username ?? "")")

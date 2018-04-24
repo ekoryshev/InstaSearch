@@ -15,7 +15,7 @@ class Session: SessionInterface {
     static var shared = Session(inStore: UserDefaults(suiteName: "app.session.store"))
     
     /// The API token
-    var accessToken: String? {
+    var accessToken: String? { // FIXME: Use Keychain!
         get {
             return store.object(forKey: Keys.accessToken) as? String
         }
