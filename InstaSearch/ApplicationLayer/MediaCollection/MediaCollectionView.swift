@@ -1,4 +1,4 @@
-import Foundation
+import UIKit
 
 import SnapKit
 
@@ -11,7 +11,7 @@ class MediaCollectionView: UIView {
     convenience init() {
         self.init(frame: .zero)
         
-        self.backgroundColor = .cyan
+        self.backgroundColor = .white
     }
     
     override func updateConstraints() {

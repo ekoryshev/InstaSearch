@@ -1,5 +1,10 @@
-import Foundation
 import UIKit
+
+import Swinject
+
+private enum Constant {
+    static let title = LocalizedString("InstaSearch")
+}
 
 class MediaCollectionViewController: MVVMViewController, MVVMLifeCycleProtocol {
     
@@ -11,6 +16,15 @@ class MediaCollectionViewController: MVVMViewController, MVVMLifeCycleProtocol {
     
     var viewModel: MediaCollectionViewModel!
     
+    override var title: String? {
+        get {
+            return super.title ?? Constant.title
+        }
+        set {
+            super.title = newValue
+        }
+    }
+    
     // MARK: Life Cycle
     
     override func loadView() {
@@ -19,6 +33,8 @@ class MediaCollectionViewController: MVVMViewController, MVVMLifeCycleProtocol {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureNavBar()
         
         bindViewModel(viewModel)
     }
@@ -29,4 +45,22 @@ class MediaCollectionViewController: MVVMViewController, MVVMLifeCycleProtocol {
         super.bindViewModel(viewModel)
     }
     
+    // MARK: Handlers
+    
+    @objc fileprivate func logInBarButtonItemTap(_ item: UIBarButtonItem) {
+        let resolver = Assembler([AuthorizationAssembly()]).resolver
+        let controller = resolver.resolve(CustomNavigationController.self)!
+        self.present(controller, animated: true, completion: nil)
+    }
+    
+    // MARK: Private Methods
+    
+    fileprivate func configureNavBar() {
+        self.navigationController?.navigationBar.isTranslucent = false
+        
+        let logInItem = UIBarButtonItem.makeLogInItem(
+            self,
+            selector: #selector(logInBarButtonItemTap(_:)))
+        self.navigationItem.rightBarButtonItem = logInItem
+    }
 }

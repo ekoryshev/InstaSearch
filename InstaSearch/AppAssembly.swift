@@ -15,7 +15,6 @@ class AppAssembly: MVVMAssembly {
         container.register(CustomNavigationController.self) { resolver in
             let navController = CustomNavigationController(
                 rootViewController: resolver.resolve(MediaCollectionViewController.self)!)
-            navController.setNavigationBarHidden(true, animated: false)
             return navController
         }
     }

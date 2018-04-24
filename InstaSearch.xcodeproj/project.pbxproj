@@ -27,11 +27,17 @@
 		446A32E8208D009900689A4D /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32E7208D009900689A4D /* Endpoints.swift */; };
 		446A32ED208D0D3800689A4D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32EC208D0D3800689A4D /* Utils.swift */; };
 		446A32F1208D0EF800689A4D /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32F0208D0EF800689A4D /* ErrorResponse.swift */; };
-		446A32F4208D143D00689A4D /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32F3208D143D00689A4D /* APIError.swift */; };
+		446A32F4208D143D00689A4D /* InstagramAPIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32F3208D143D00689A4D /* InstagramAPIError.swift */; };
 		446A32F6208D146400689A4D /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32F5208D146400689A4D /* NetworkError.swift */; };
 		446A32F9208D1B6500689A4D /* UIView+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32F8208D1B6500689A4D /* UIView+ActivityIndicator.swift */; };
 		446A32FC208D26EC00689A4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 446A32FA208D26EC00689A4D /* LaunchScreen.storyboard */; };
 		446A32FE208D294200689A4D /* MVVMLifeCycleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32FD208D294200689A4D /* MVVMLifeCycleProtocol.swift */; };
+		448DB992208E785F00B784F3 /* AuthorizationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448DB991208E785F00B784F3 /* AuthorizationView.swift */; };
+		448DB994208E787400B784F3 /* AuthorizationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448DB993208E787400B784F3 /* AuthorizationViewModel.swift */; };
+		448DB996208E789000B784F3 /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448DB995208E789000B784F3 /* AuthorizationViewController.swift */; };
+		448DB998208E78A700B784F3 /* AuthorizationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448DB997208E78A700B784F3 /* AuthorizationAssembly.swift */; };
+		448DB99A208E82D900B784F3 /* UIBarButtonItem+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448DB999208E82D900B784F3 /* UIBarButtonItem+NavigationBar.swift */; };
+		448DB99C208EA03400B784F3 /* AuthorizationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448DB99B208EA03400B784F3 /* AuthorizationRepository.swift */; };
 		E65CC75E053B2A18E5D130C6 /* Pods_InstaSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6941DF7069476B5214D1B3EE /* Pods_InstaSearch.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,11 +64,17 @@
 		446A32E7208D009900689A4D /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 		446A32EC208D0D3800689A4D /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		446A32F0208D0EF800689A4D /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
-		446A32F3208D143D00689A4D /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		446A32F3208D143D00689A4D /* InstagramAPIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramAPIError.swift; sourceTree = "<group>"; };
 		446A32F5208D146400689A4D /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		446A32F8208D1B6500689A4D /* UIView+ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ActivityIndicator.swift"; sourceTree = "<group>"; };
 		446A32FB208D26EC00689A4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		446A32FD208D294200689A4D /* MVVMLifeCycleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMLifeCycleProtocol.swift; sourceTree = "<group>"; };
+		448DB991208E785F00B784F3 /* AuthorizationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationView.swift; sourceTree = "<group>"; };
+		448DB993208E787400B784F3 /* AuthorizationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewModel.swift; sourceTree = "<group>"; };
+		448DB995208E789000B784F3 /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		448DB997208E78A700B784F3 /* AuthorizationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationAssembly.swift; sourceTree = "<group>"; };
+		448DB999208E82D900B784F3 /* UIBarButtonItem+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+NavigationBar.swift"; sourceTree = "<group>"; };
+		448DB99B208EA03400B784F3 /* AuthorizationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationRepository.swift; sourceTree = "<group>"; };
 		6941DF7069476B5214D1B3EE /* Pods_InstaSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB94D3E03D45A8CCE409FB96 /* Pods-InstaSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstaSearch/Pods-InstaSearch.release.xcconfig"; sourceTree = "<group>"; };
 		EE45A3DF6EBE6A962AD169B5 /* Pods-InstaSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaSearch/Pods-InstaSearch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +165,7 @@
 		446A32A2208CDBB100689A4D /* ApplicationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				448DB990208E77BC00B784F3 /* Authorization */,
 				446A32B0208CF0A900689A4D /* MediaCollection */,
 			);
 			path = ApplicationLayer;
@@ -254,7 +267,7 @@
 		446A32F2208D142000689A4D /* Errors */ = {
 			isa = PBXGroup;
 			children = (
-				446A32F3208D143D00689A4D /* APIError.swift */,
+				446A32F3208D143D00689A4D /* InstagramAPIError.swift */,
 				446A32F5208D146400689A4D /* NetworkError.swift */,
 			);
 			path = Errors;
@@ -264,8 +277,21 @@
 			isa = PBXGroup;
 			children = (
 				446A32F8208D1B6500689A4D /* UIView+ActivityIndicator.swift */,
+				448DB999208E82D900B784F3 /* UIBarButtonItem+NavigationBar.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		448DB990208E77BC00B784F3 /* Authorization */ = {
+			isa = PBXGroup;
+			children = (
+				448DB991208E785F00B784F3 /* AuthorizationView.swift */,
+				448DB993208E787400B784F3 /* AuthorizationViewModel.swift */,
+				448DB995208E789000B784F3 /* AuthorizationViewController.swift */,
+				448DB99B208EA03400B784F3 /* AuthorizationRepository.swift */,
+				448DB997208E78A700B784F3 /* AuthorizationAssembly.swift */,
+			);
+			path = Authorization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,26 +437,32 @@
 				446A32E1208CFED000689A4D /* Session.swift in Sources */,
 				446A32DF208CFE0E00689A4D /* ConfigurationInterface.swift in Sources */,
 				446A32E8208D009900689A4D /* Endpoints.swift in Sources */,
+				448DB99C208EA03400B784F3 /* AuthorizationRepository.swift in Sources */,
 				446A32B2208CF15A00689A4D /* MediaCollectionView.swift in Sources */,
 				446A32D4208CF6AA00689A4D /* MVVMViewModel.swift in Sources */,
 				446A32B4208CF41D00689A4D /* MediaCollectionViewModel.swift in Sources */,
 				446A32AB208CE20200689A4D /* CustomNavigationController.swift in Sources */,
 				446A32E5208CFF2B00689A4D /* Configuration.swift in Sources */,
+				448DB99A208E82D900B784F3 /* UIBarButtonItem+NavigationBar.swift in Sources */,
 				446A32AF208CEC0500689A4D /* MediaCollectionAssembly.swift in Sources */,
 				446A32FE208D294200689A4D /* MVVMLifeCycleProtocol.swift in Sources */,
 				446A32F6208D146400689A4D /* NetworkError.swift in Sources */,
 				446A32DB208CFD5900689A4D /* SessionInterface.swift in Sources */,
 				446A32DD208CFD8A00689A4D /* NetworkManagerInterface.swift in Sources */,
 				446A32A9208CDFBE00689A4D /* MVVMAssembly.swift in Sources */,
+				448DB994208E787400B784F3 /* AuthorizationViewModel.swift in Sources */,
+				448DB992208E785F00B784F3 /* AuthorizationView.swift in Sources */,
 				446A32F9208D1B6500689A4D /* UIView+ActivityIndicator.swift in Sources */,
 				446A32D6208CF75900689A4D /* MVVMViewController.swift in Sources */,
+				448DB996208E789000B784F3 /* AuthorizationViewController.swift in Sources */,
 				446A32AD208CE8CD00689A4D /* MediaCollectionViewController.swift in Sources */,
 				446A32F1208D0EF800689A4D /* ErrorResponse.swift in Sources */,
+				448DB998208E78A700B784F3 /* AuthorizationAssembly.swift in Sources */,
 				446A32E3208CFF0200689A4D /* NetworkManager.swift in Sources */,
 				446A328A208CC28300689A4D /* AppDelegate.swift in Sources */,
 				446A32ED208D0D3800689A4D /* Utils.swift in Sources */,
 				446A32A4208CDF3600689A4D /* AppAssembly.swift in Sources */,
-				446A32F4208D143D00689A4D /* APIError.swift in Sources */,
+				446A32F4208D143D00689A4D /* InstagramAPIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,6 +595,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = InstaSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IS_API_URL = "https://api.instagram.com";
+				IS_INSTA_CLIENT_ID = 5181f217305d45519e98ea6099e31d99;
+				IS_INSTA_CLIENT_SECRET = f7fccccfca5f42e2a78d00d9a9f62931;
+				IS_INSTA_REDIRECT_URL = "http://yourcallback.com/";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = eugene.InstaSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -579,6 +615,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = InstaSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IS_API_URL = "https://api.instagram.com";
+				IS_INSTA_CLIENT_ID = 5181f217305d45519e98ea6099e31d99;
+				IS_INSTA_CLIENT_SECRET = f7fccccfca5f42e2a78d00d9a9f62931;
+				IS_INSTA_REDIRECT_URL = "http://yourcallback.com/";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = eugene.InstaSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";

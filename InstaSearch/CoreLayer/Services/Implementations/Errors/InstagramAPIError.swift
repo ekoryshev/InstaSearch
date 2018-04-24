@@ -1,6 +1,6 @@
 import Foundation
 
-enum APIError: LocalizedError {
+enum InstagramAPIError: LocalizedError {
     case error(value: String)
     
     var errorDescription: String? {

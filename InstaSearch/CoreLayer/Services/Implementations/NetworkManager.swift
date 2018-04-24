@@ -121,7 +121,7 @@ class NetworkManager: NetworkManagerInterface {
     private class ErrorHelper {
         static func toApplication(from error: ErrorResponse?) -> Error {
             if let error = error {
-                return APIError.error(value: error.message)
+                return InstagramAPIError.error(value: error.message)
             }
             return NetworkError.lostConnection
         }
