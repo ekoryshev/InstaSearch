@@ -14,6 +14,7 @@ class MediaCollectionAssembly: MVVMAssembly {
         container.register(MediaCollectionViewController.self) { resolver in
             let controller = MediaCollectionViewController()
             controller.viewModel = resolver.resolve(MediaCollectionViewModel.self)
+            controller.session = resolver.resolve(SessionInterface.self)
             return controller
         }
     }

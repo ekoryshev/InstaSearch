@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4403A1E9208F4D0200F3E052 /* AuthorizationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4403A1E8208F4D0200F3E052 /* AuthorizationResponse.swift */; };
+		4403A1EB208F4EA100F3E052 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4403A1EA208F4EA100F3E052 /* User.swift */; };
 		446A328A208CC28300689A4D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A3289208CC28300689A4D /* AppDelegate.swift */; };
 		446A3291208CC28300689A4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 446A3290208CC28300689A4D /* Assets.xcassets */; };
 		446A32A4208CDF3600689A4D /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 446A32A3208CDF3600689A4D /* AppAssembly.swift */; };
@@ -42,6 +44,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4403A1E8208F4D0200F3E052 /* AuthorizationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationResponse.swift; sourceTree = "<group>"; };
+		4403A1EA208F4EA100F3E052 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		446A3286208CC28300689A4D /* InstaSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		446A3289208CC28300689A4D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		446A3290208CC28300689A4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -252,6 +256,7 @@
 			isa = PBXGroup;
 			children = (
 				446A32EF208D0EE000689A4D /* Responces */,
+				4403A1EA208F4EA100F3E052 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -260,6 +265,7 @@
 			isa = PBXGroup;
 			children = (
 				446A32F0208D0EF800689A4D /* ErrorResponse.swift */,
+				4403A1E8208F4D0200F3E052 /* AuthorizationResponse.swift */,
 			);
 			path = Responces;
 			sourceTree = "<group>";
@@ -434,9 +440,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4403A1E9208F4D0200F3E052 /* AuthorizationResponse.swift in Sources */,
 				446A32E1208CFED000689A4D /* Session.swift in Sources */,
 				446A32DF208CFE0E00689A4D /* ConfigurationInterface.swift in Sources */,
 				446A32E8208D009900689A4D /* Endpoints.swift in Sources */,
+				4403A1EB208F4EA100F3E052 /* User.swift in Sources */,
 				448DB99C208EA03400B784F3 /* AuthorizationRepository.swift in Sources */,
 				446A32B2208CF15A00689A4D /* MediaCollectionView.swift in Sources */,
 				446A32D4208CF6AA00689A4D /* MVVMViewModel.swift in Sources */,
@@ -593,6 +601,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FRQ3E857HE;
 				INFOPLIST_FILE = InstaSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				IS_API_URL = "https://api.instagram.com";
@@ -613,6 +622,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FRQ3E857HE;
 				INFOPLIST_FILE = InstaSearch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				IS_API_URL = "https://api.instagram.com";

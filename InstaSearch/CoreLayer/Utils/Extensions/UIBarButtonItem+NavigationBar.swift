@@ -10,6 +10,10 @@ extension UIBarButtonItem {
     static func makeLogInItem(_ target: Any, selector: Selector) -> UIBarButtonItem {
         return UIBarButtonItem(title: LocalizedString("Log in"), style: .plain, target: target, action: selector)
     }
+    
+    static func makeLogOutItem(_ target: Any, selector: Selector) -> UIBarButtonItem {
+        return UIBarButtonItem(title: LocalizedString("Log out"), style: .plain, target: target, action: selector)
+    }
 
     static func makeBackItem(_ target: Any, selector: Selector) -> UIBarButtonItem {
         return UIBarButtonItem(title: LocalizedString("Back"), style: .plain, target: target, action: selector)

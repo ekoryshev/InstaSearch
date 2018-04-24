@@ -3,10 +3,10 @@ import Foundation
 protocol SessionInterface {
     
     /// The API token
-    var token: String? { get set }
+    var accessToken: String? { get set }
     
     /// The current user id
-    var userID: Int? { get set }
+    var userID: String? { get set }
 
     /// The current user name
     var username: String? { get set }

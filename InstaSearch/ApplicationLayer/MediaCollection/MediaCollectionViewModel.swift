@@ -10,4 +10,9 @@ class MediaCollectionViewModel: MVVMViewModel {
         super.init()
     }
     
+    func loadMedia() {
+        print(#function)
+        
+    }
+    
 }

@@ -1,8 +1,14 @@
 import UIKit
 import WebKit
 
+import ReactiveSwift
+
 private enum Constant {
     static let title = LocalizedString("Authorization")
+}
+
+protocol AuthorizationViewControllerDelegate: class {
+    func authorizationModalDismissed()
 }
 
 class AuthorizationViewController: MVVMViewController, MVVMLifeCycleProtocol {
@@ -16,7 +22,7 @@ class AuthorizationViewController: MVVMViewController, MVVMLifeCycleProtocol {
     // MARK: MVVMLifeCycle
     
     var viewModel: AuthorizationViewModel!
-    var configuration: ConfigurationInterface!
+    weak var delegate: AuthorizationViewControllerDelegate?
     
     override var title: String? {
         get {
@@ -41,7 +47,7 @@ class AuthorizationViewController: MVVMViewController, MVVMLifeCycleProtocol {
         viewType.webView.navigationDelegate = self
         
         // Step One: Direct your user to our authorization URL
-        loadAuthorizationURL()
+        authorize()
         
         bindViewModel(viewModel)
     }
@@ -49,16 +55,15 @@ class AuthorizationViewController: MVVMViewController, MVVMLifeCycleProtocol {
     // MARK: MVVMLifeCycle
     
     func bindViewModel(_ viewModel: AuthorizationViewModel) {
-        
         super.bindViewModel(viewModel)
+        
+        configureCloseModuleSignal(viewModel)
     }
     
     // MARK: Private Methods
     
-    func loadAuthorizationURL() {
-        let urlString = "\(configuration.apiURL!)\(Endpoints.authorize.rawValue)/?client_id=\(configuration.instaClientID!)&redirect_uri=\(configuration.instaRedirectURL!)&response_type=code"
-        
-        if let url = URL(string: urlString) {
+    func authorize() {
+        if let url = viewModel.getAuthorizationURL() {
             viewType.webView.load(URLRequest(url: url))
         }
     }
@@ -70,6 +75,18 @@ class AuthorizationViewController: MVVMViewController, MVVMLifeCycleProtocol {
             self,
             selector: #selector(cancelBarButtonItemTap(_:)))
         self.navigationItem.leftBarButtonItem = cancelItem
+    }
+    
+    fileprivate func configureCloseModuleSignal(_ viewModel: AuthorizationViewModel) {
+        viewModel.closeModuleSignal
+            .observe(on: UIScheduler())
+            .take(duringLifetimeOf: self)
+            .observeValues { [weak self] in
+                withExtendedLifetime(self) {
+                    self?.delegate?.authorizationModalDismissed()
+                    self?.dismiss(animated: true)
+                }
+        }
     }
     
     // MARK: Handlers
@@ -84,18 +101,26 @@ extension AuthorizationViewController: WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         // Step Two: Receive the redirect from Instagram
-        
-        if navigationAction.navigationType == .formSubmitted {
-            if let url = navigationAction.request.url {
-                if let code = viewModel.extractCode(url) {
-                    // Step Three: Request the access_token
-                    print("code: \(code)")
-                    // self.dismiss(animated: true, completion: nil)
-                }
-            }
+
+        if navigationAction.navigationType != .formSubmitted
+            && navigationAction.navigationType.rawValue != -1 {
+            decisionHandler(.allow)
+            return
         }
         
-        decisionHandler(.allow)
+        if let url = navigationAction.request.url {
+            if let code = viewModel.extractCode(url) {
+                // Step Three: Request the access_token
+                print("code: \(code)")
+                decisionHandler(.cancel)
+                viewModel.authorize(code: code)
+            } else if let error = viewModel.extractError(url) {
+                print("error: \(error)")
+                decisionHandler(.cancel)
+                self.dismiss(animated: true, completion: nil)
+            } else {
+                decisionHandler(.allow)
+            }
+        }
     }
-    
 }

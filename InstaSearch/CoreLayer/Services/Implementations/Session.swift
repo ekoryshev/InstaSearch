@@ -5,12 +5,9 @@ class Session: SessionInterface {
     
     /// The Keys describes all keys for storing data.
     enum Keys {
-        static let token = "token"
+        static let accessToken = "accessToken"
         static let userID = "userID"
-        static let name = "name"
         static let username = "username"
-        static let userpassword = "userpassword"
-        static let deviceToken = "deviceToken"
         static let authorized = "authorized"
     }
     
@@ -18,20 +15,20 @@ class Session: SessionInterface {
     static var shared = Session(inStore: UserDefaults(suiteName: "app.session.store"))
     
     /// The API token
-    var token: String? {
+    var accessToken: String? {
         get {
-            return store.object(forKey: Keys.token) as? String
+            return store.object(forKey: Keys.accessToken) as? String
         }
         set {
-            store.set(newValue, forKey: Keys.token)
+            store.set(newValue, forKey: Keys.accessToken)
             store.synchronize()
         }
     }
     
     /// The current user id
-    var userID: Int? {
+    var userID: String? {
         get {
-            return store.object(forKey: Keys.userID) as? Int
+            return store.object(forKey: Keys.userID) as? String
         }
         set {
             store.set(newValue, forKey: Keys.userID)
