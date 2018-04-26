@@ -22,6 +22,7 @@ class AuthorizationViewController: MVVMViewController, MVVMLifeCycleProtocol {
     // MARK: MVVMLifeCycle
     
     var viewModel: AuthorizationViewModel!
+    var session: SessionInterface!
     weak var delegate: AuthorizationViewControllerDelegate?
     
     override var title: String? {
@@ -100,7 +101,6 @@ class AuthorizationViewController: MVVMViewController, MVVMLifeCycleProtocol {
 extension AuthorizationViewController: WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
-        // Step Two: Receive the redirect from Instagram
 
         if navigationAction.navigationType != .formSubmitted
             && navigationAction.navigationType.rawValue != -1 {
@@ -109,11 +109,12 @@ extension AuthorizationViewController: WKNavigationDelegate {
         }
         
         if let url = navigationAction.request.url {
-            if let code = viewModel.extractCode(url) {
-                // Step Three: Request the access_token
-                print("code: \(code)")
+            if let token = viewModel.extractToken(url) {
+                // Step Two: Receive the access_token via the URL fragment
+                print("access_token: \(token)")
+                session.accessToken = token
+                viewModel.authorize()
                 decisionHandler(.cancel)
-                viewModel.authorize(code: code)
             } else if let error = viewModel.extractError(url) {
                 print("error: \(error)")
                 decisionHandler(.cancel)

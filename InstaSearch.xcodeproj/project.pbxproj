@@ -49,6 +49,8 @@
 		448DB998208E78A700B784F3 /* AuthorizationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448DB997208E78A700B784F3 /* AuthorizationAssembly.swift */; };
 		448DB99A208E82D900B784F3 /* UIBarButtonItem+NavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448DB999208E82D900B784F3 /* UIBarButtonItem+NavigationBar.swift */; };
 		448DB99C208EA03400B784F3 /* AuthorizationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448DB99B208EA03400B784F3 /* AuthorizationRepository.swift */; };
+		44D6690F20918DCE006EF097 /* UserInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D6690E20918DCE006EF097 /* UserInfoResponse.swift */; };
+		44D6691120919583006EF097 /* ErrorInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D6691020919583006EF097 /* ErrorInfo.swift */; };
 		E65CC75E053B2A18E5D130C6 /* Pods_InstaSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6941DF7069476B5214D1B3EE /* Pods_InstaSearch.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +99,8 @@
 		448DB997208E78A700B784F3 /* AuthorizationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationAssembly.swift; sourceTree = "<group>"; };
 		448DB999208E82D900B784F3 /* UIBarButtonItem+NavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+NavigationBar.swift"; sourceTree = "<group>"; };
 		448DB99B208EA03400B784F3 /* AuthorizationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationRepository.swift; sourceTree = "<group>"; };
+		44D6690E20918DCE006EF097 /* UserInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoResponse.swift; sourceTree = "<group>"; };
+		44D6691020919583006EF097 /* ErrorInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorInfo.swift; sourceTree = "<group>"; };
 		6941DF7069476B5214D1B3EE /* Pods_InstaSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB94D3E03D45A8CCE409FB96 /* Pods-InstaSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstaSearch/Pods-InstaSearch.release.xcconfig"; sourceTree = "<group>"; };
 		EE45A3DF6EBE6A962AD169B5 /* Pods-InstaSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaSearch/Pods-InstaSearch.debug.xcconfig"; sourceTree = "<group>"; };
@@ -275,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				446A32EF208D0EE000689A4D /* Responces */,
+				44D6691020919583006EF097 /* ErrorInfo.swift */,
 				4403A1EA208F4EA100F3E052 /* User.swift */,
 				443A7B0C208FC3B500313CD1 /* Pagination.swift */,
 				443A7B0E208FC55800313CD1 /* Media.swift */,
@@ -293,6 +298,7 @@
 				446A32F0208D0EF800689A4D /* ErrorResponse.swift */,
 				4403A1E8208F4D0200F3E052 /* AuthorizationResponse.swift */,
 				443A7B0A208FC35F00313CD1 /* MediaResponse.swift */,
+				44D6690E20918DCE006EF097 /* UserInfoResponse.swift */,
 			);
 			path = Responces;
 			sourceTree = "<group>";
@@ -483,7 +489,9 @@
 				446A32D4208CF6AA00689A4D /* MVVMViewModel.swift in Sources */,
 				446A32B4208CF41D00689A4D /* MediaCollectionViewModel.swift in Sources */,
 				443A7B11208FC65500313CD1 /* Images.swift in Sources */,
+				44D6691120919583006EF097 /* ErrorInfo.swift in Sources */,
 				446A32AB208CE20200689A4D /* CustomNavigationController.swift in Sources */,
+				44D6690F20918DCE006EF097 /* UserInfoResponse.swift in Sources */,
 				446A32E5208CFF2B00689A4D /* Configuration.swift in Sources */,
 				448DB99A208E82D900B784F3 /* UIBarButtonItem+NavigationBar.swift in Sources */,
 				446A32AF208CEC0500689A4D /* MediaCollectionAssembly.swift in Sources */,
@@ -642,7 +650,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				IS_API_URL = "https://api.instagram.com";
 				IS_INSTA_CLIENT_ID = 5181f217305d45519e98ea6099e31d99;
-				IS_INSTA_CLIENT_SECRET = f7fccccfca5f42e2a78d00d9a9f62931;
 				IS_INSTA_REDIRECT_URL = "http://yourcallback.com/";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = eugene.InstaSearch;
@@ -663,7 +670,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				IS_API_URL = "https://api.instagram.com";
 				IS_INSTA_CLIENT_ID = 5181f217305d45519e98ea6099e31d99;
-				IS_INSTA_CLIENT_SECRET = f7fccccfca5f42e2a78d00d9a9f62931;
 				IS_INSTA_REDIRECT_URL = "http://yourcallback.com/";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = eugene.InstaSearch;

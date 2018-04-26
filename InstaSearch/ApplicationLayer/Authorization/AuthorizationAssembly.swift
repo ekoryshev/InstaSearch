@@ -25,6 +25,7 @@ class AuthorizationAssembly: MVVMAssembly {
         container.register(AuthorizationViewController.self) { resolver in
             let controller = AuthorizationViewController()
             controller.viewModel = resolver.resolve(AuthorizationViewModel.self)
+            controller.session = resolver.resolve(SessionInterface.self)
             return controller
         }
         

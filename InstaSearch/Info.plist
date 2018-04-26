@@ -50,8 +50,6 @@
 		<string>$(IS_API_URL)</string>
 		<key>IS_INSTA_CLIENT_ID</key>
 		<string>$(IS_INSTA_CLIENT_ID)</string>
-		<key>IS_INSTA_CLIENT_SECRET</key>
-		<string>$(IS_INSTA_CLIENT_SECRET)</string>
 		<key>IS_INSTA_REDIRECT_URL</key>
 		<string>$(IS_INSTA_REDIRECT_URL)</string>
 	</dict>

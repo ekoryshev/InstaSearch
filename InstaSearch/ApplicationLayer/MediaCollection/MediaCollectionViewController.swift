@@ -71,6 +71,7 @@ class MediaCollectionViewController: MVVMViewController, MVVMLifeCycleProtocol {
     
     @objc fileprivate func logOutBarButtonItemTap(_ item: UIBarButtonItem) {
         session.clear()
+        viewModel.data.value = nil
         configureNavBar()
     }
     
@@ -103,12 +104,13 @@ class MediaCollectionViewController: MVVMViewController, MVVMLifeCycleProtocol {
             .observeValues { [weak self] _ in
                 withExtendedLifetime(self) {
                     print(#function)
-                    
-                    for item in viewModel.data.value!.data {
-                        print("\(item.caption.text)\n")
-                    }
-                    
                     // TODO: Reload data
+                    
+                    if let data = viewModel.data.value?.data {
+                        for item in data {
+                            print("\(item.caption.text)\n")
+                        }
+                    }
                 }
         }
     }

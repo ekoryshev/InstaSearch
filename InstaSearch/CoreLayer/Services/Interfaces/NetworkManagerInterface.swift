@@ -18,6 +18,7 @@ protocol NetworkManagerInterface {
         parameters: Parameters,
         completionHandler: @escaping (Result<Data>) -> Void
     )
+
 }
 
 extension NetworkManagerInterface {

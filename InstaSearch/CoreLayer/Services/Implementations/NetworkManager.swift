@@ -47,8 +47,6 @@ class NetworkManager: NetworkManagerInterface {
         printEndpoint(endpoint, method: method, parameters: parameters)
         
         let urlEncodingType = URLEncoding.default as ParameterEncoding
-        let jsonEncodingType = JSONEncoding.default as ParameterEncoding
-        // let encoding = method == .get ? urlEncodingType : jsonEncodingType
         
         let parameters = !parameters.isEmpty ? parameters : nil
         let url = configuration.apiURL!
@@ -69,7 +67,7 @@ class NetworkManager: NetworkManagerInterface {
                 debugLog("\(method.rawValue.uppercased()): \(endpoint.rawValue)")
                 debugLog("\(error.localizedDescription)")
                 if let value = ToObject(ErrorResponse.self, from: response.data) {
-                    debugLog("{ \n  \"code\": \(value.code), \n  \"message\": \(value.errorMessage) \n}")
+                    debugLog("{ \n  \"code\": \(value.meta.code), \n  \"message\": \(value.meta.errorMessage) \n}")
                     completionHandler(Result<Data>.failure(ErrorHelper.toApplication(from: value)))
                 } else {
                     completionHandler(Result<Data>.failure(NetworkError.lostConnection))
@@ -111,17 +109,32 @@ class NetworkManager: NetworkManagerInterface {
         
         func adapt(_ request: URLRequest) throws -> URLRequest {
             var request = request
-            request.setValue(session.accessToken ?? nil, forHTTPHeaderField: "Authorization")
+            
+            guard let url = request.url, let accessToken = session.accessToken else {
+                return request
+            }
+            
+            let accessTokenParam = "access_token=\(accessToken)"
+            
+            var urlString = url.absoluteString
+            if urlString.range(of: "?") != nil {
+               urlString.append("&\(accessTokenParam)")
+            } else {
+                urlString.append("?\(accessTokenParam)")
+            }
+            
+            request.url = URL(string: urlString)
+            
             return request
         }
     }
     
     // MARK: Error Helper Implementation
-    
+
     private class ErrorHelper {
         static func toApplication(from error: ErrorResponse?) -> Error {
             if let error = error {
-                return InstagramAPIError.error(value: error.errorMessage)
+                return InstagramAPIError.error(value: error.meta.errorMessage)
             }
             return NetworkError.lostConnection
         }

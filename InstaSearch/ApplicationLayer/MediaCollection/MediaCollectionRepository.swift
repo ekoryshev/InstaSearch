@@ -11,7 +11,6 @@ class MediaCollectionRepository {
         assert(session.accessToken != nil)
         
         let parameters: [String: Any] = [
-            "access_token": session.accessToken!,
             "count": count
         ]
         

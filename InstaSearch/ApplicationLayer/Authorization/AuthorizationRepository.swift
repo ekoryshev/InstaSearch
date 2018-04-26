@@ -7,24 +7,15 @@ class AuthorizationRepository {
     var session: SessionInterface!
     var configuration: ConfigurationInterface!
     var networkManager: NetworkManagerInterface!
-    
-    func authorize(code: String, completionHandler: @escaping (Result<AuthorizationResponse?>) -> Void) {
-        let parameters: [String: Any] = [
-            "client_id": configuration.instaClientID,
-            "client_secret": configuration.instaClientSecret,
-            "grant_type": "authorization_code",
-            "redirect_uri": configuration.instaRedirectURL,
-            "code": code
-        ]
-        
+
+    func authorize(completionHandler: @escaping (Result<UserInfoResponse?>) -> Void) {
         networkManager.request(
-            .accessToken,
-            method: .post,
-            parameters: parameters).startWithResult { [weak self] response in
+            .userInfo,
+            method: .get,
+            parameters: [String: Any]()).startWithResult { [weak self] response in
             switch response {
             case let .success(value):
-                guard let authorizationResponse = ToObject(AuthorizationResponse.self, from: value) else {
-                    self?.session.accessToken = nil
+                guard let userInfoResponse = ToObject(UserInfoResponse.self, from: value) else {
                     self?.session.userID = nil
                     self?.session.username = nil
                     self?.session.isAuthorized = false
@@ -33,16 +24,11 @@ class AuthorizationRepository {
                     return
                 }
                 
-                self?.session.accessToken = authorizationResponse.accessToken
-                self?.session.userID = authorizationResponse.user.id
-                self?.session.username = authorizationResponse.user.username
+                self?.session.userID = userInfoResponse.data.id
+                self?.session.username = userInfoResponse.data.username
                 self?.session.isAuthorized = true
 
-                
-                // TODO: Get information about the owner of the access_token.
-                // GET /users/self
-
-                completionHandler(Result.success(authorizationResponse))
+                completionHandler(Result.success(userInfoResponse))
             case let .failure(error):
                 completionHandler(Result.failure(error))
             }

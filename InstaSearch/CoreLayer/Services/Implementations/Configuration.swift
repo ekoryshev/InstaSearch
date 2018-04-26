@@ -4,7 +4,6 @@ private enum Key {
     static let configuration = "Configuration"
     static let apiURL = "IS_API_URL"
     static let instaClientID = "IS_INSTA_CLIENT_ID"
-    static let instaClientSecret = "IS_INSTA_CLIENT_SECRET"
     static let instaRedirectURL = "IS_INSTA_REDIRECT_URL"
 }
 
@@ -18,10 +17,6 @@ class Configuration: ConfigurationInterface {
     
     var instaClientID: String! {
         return configuration?[Key.instaClientID] ?? ""
-    }
-    
-    var instaClientSecret: String! {
-        return configuration?[Key.instaClientSecret] ?? ""
     }
     
     var instaRedirectURL: String! {

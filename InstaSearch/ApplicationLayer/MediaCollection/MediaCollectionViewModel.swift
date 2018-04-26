@@ -53,5 +53,5 @@ class MediaCollectionViewModel: MVVMViewModel {
             self?.loading.value = false
         }
     }
-    
+
 }
