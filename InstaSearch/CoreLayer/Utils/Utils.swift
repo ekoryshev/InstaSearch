@@ -7,6 +7,7 @@ enum DecodingError: LocalizedError {
     case `nil`
 }
 
+// swiftlint:disable:next identifier_name
 func ToObject<T: Decodable>(
     _ type: T.Type,
     from value: Data?
@@ -38,6 +39,7 @@ func ToObject<T: Decodable>(
     return nil
 }
 
+// swiftlint:disable:next identifier_name
 func ToObject<T: Decodable>(
     _ type: T.Type,
     bundle: Bundle,
@@ -55,6 +57,7 @@ func ToObject<T: Decodable>(
     return nil
 }
 
+// swiftlint:disable:next identifier_name
 public func LocalizedString(
     _ key: String,
     tableName: String? = nil,

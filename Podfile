@@ -9,6 +9,7 @@ target 'InstaSearch' do
   pod 'ReactiveCocoa', '7.1.0'
   pod 'SnapKit', '4.0.0'
   pod 'SwiftDate', '4.4.2'
+  pod 'SwiftLint', '0.25.0'
   pod 'Swinject', '2.1.1'
 
 end

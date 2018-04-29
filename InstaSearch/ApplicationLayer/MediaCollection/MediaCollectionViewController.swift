@@ -12,6 +12,7 @@ class MediaCollectionViewController: MVVMViewController, MVVMLifeCycleProtocol {
     // MARK: MVVM
     
     var viewType: MediaCollectionView! {
+        // swiftlint:disable:next force_cast
         return view as! MediaCollectionView
     }
     
@@ -59,7 +60,7 @@ class MediaCollectionViewController: MVVMViewController, MVVMLifeCycleProtocol {
         let resolver = Assembler([AuthorizationAssembly()]).resolver
         let controller = resolver.resolve(CustomNavigationController.self)!
         
-        if controller.viewControllers.count > 0 {
+        if !controller.viewControllers.isEmpty {
             if let authorizationViewController = (controller.viewControllers[0]
                 as? AuthorizationViewController) {
                 authorizationViewController.delegate = self

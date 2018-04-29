@@ -7,4 +7,3 @@ class Comments: Codable {
         case count
     }
 }
-

@@ -84,9 +84,8 @@ extension UIView {
             activityIndicator?.alpha = 0.0
             activityIndicator?.activityIndicatorViewStyle = activityIndicatorStyle
             activityIndicator?.color = AppearanceDefaults.activityIndicatorColor
-            // swiftlint:disable line_length
+            // swiftlint:disable:next line_length
             activityIndicator?.backgroundColor = activityIndicatorBackgroundColor ?? AppearanceDefaults.activityIndicatorBackgroundColor
-            // swiftlint:enable line_length
         }
         
         guard let activityIndicator = activityIndicator else {

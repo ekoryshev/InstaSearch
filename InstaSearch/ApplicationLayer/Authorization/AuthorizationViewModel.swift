@@ -23,7 +23,7 @@ class AuthorizationViewModel: MVVMViewModel {
     
     func authorize() {
         loading.value = true
-        repository.authorize() { [weak self] result in
+        repository.authorize { [weak self] result in
             // TODO: Handle nil result
             switch result {
             case let .success(value):
@@ -42,8 +42,11 @@ class AuthorizationViewModel: MVVMViewModel {
         guard let configuration = configuration else {
             return nil
         }
+
+        let urlString = ["\(configuration.apiURL!)\(Endpoints.authorize.rawValue)",
+            "/?client_id=\(configuration.instaClientID!)&redirect_uri=",
+            "\(configuration.instaRedirectURL!)&response_type=token"].joined()
         
-        let urlString = "\(configuration.apiURL!)\(Endpoints.authorize.rawValue)/?client_id=\(configuration.instaClientID!)&redirect_uri=\(configuration.instaRedirectURL!)&response_type=token"
         return URL(string: urlString)
     }
  
@@ -52,6 +55,7 @@ class AuthorizationViewModel: MVVMViewModel {
         return extractValue(url: url, param: "access_token=", separator: "#")
     }
     
+    // swiftlint:disable:next line_length
     // http://yourcallback.com/?error_reason=user_denied&error=access_denied&error_description=The+user+denied+your+request.
     func extractError(_ url: URL) -> String? {
         return extractValue(url: url, param: "error=", separator: "&")

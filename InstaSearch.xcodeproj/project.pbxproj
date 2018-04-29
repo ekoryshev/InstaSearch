@@ -346,6 +346,7 @@
 				446A3284208CC28300689A4D /* Resources */,
 				09648C30C2992C7D468EC9D9 /* [CP] Embed Pods Frameworks */,
 				11B461E6783137137EED9ED5 /* [CP] Copy Pods Resources */,
+				44AEF5BF2095E1E500AF5FAD /* [SL] Run Script */,
 			);
 			buildRules = (
 			);
@@ -447,6 +448,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstaSearch/Pods-InstaSearch-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		44AEF5BF2095E1E500AF5FAD /* [SL] Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[SL] Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which \"${PODS_ROOT}/SwiftLint/swiftlint\" >/dev/null; then\n  \"${PODS_ROOT}/SwiftLint/swiftlint\"\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 		57AF886FF95B567F1E2F3022 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;

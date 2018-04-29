@@ -16,6 +16,7 @@ class AuthorizationViewController: MVVMViewController, MVVMLifeCycleProtocol {
     // MARK: MVVMViewType
     
     var viewType: AuthorizationView! {
+        // swiftlint:disable:next force_cast
         return view as! AuthorizationView
     }
     
@@ -100,7 +101,9 @@ class AuthorizationViewController: MVVMViewController, MVVMLifeCycleProtocol {
 
 extension AuthorizationViewController: WKNavigationDelegate {
     
-    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+    func webView(_ webView: WKWebView,
+                 decidePolicyFor navigationAction: WKNavigationAction,
+                 decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
 
         if navigationAction.navigationType != .formSubmitted
             && navigationAction.navigationType.rawValue != -1 {

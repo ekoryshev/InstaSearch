@@ -5,11 +5,11 @@ import Swinject
 class MVVMAssembly: NSObject, Assembly {
     
     func assemble(container: Container) {
-        container.register(SessionInterface.self) { resolver in
+        container.register(SessionInterface.self) { _ in
             return Session.shared
         }
 
-        container.register(ConfigurationInterface.self) { resolver in
+        container.register(ConfigurationInterface.self) { _ in
             return Configuration.shared
         }
         

@@ -1,0 +1,33 @@
+included:
+  - InstaSearch
+  
+excluded:
+  - Pods
+  - External
+    
+opt_in_rules:
+  - empty_count
+  - sorted_first_last
+  - multiline_arguments
+  - multiline_parameters
+  - switch_case_on_newline
+
+disabled_rules:
+  - trailing_whitespace
+  - todo
+  
+identifier_name:
+  excluded:
+    - id
+
+line_length: 120
+
+type_body_length:
+  - 350
+  - 600
+
+function_body_length:
+  - 40
+  - 54
+
+multiline_parameters: error
